@@ -7,8 +7,6 @@ import Footer from './components/Footer';
 import Modal from './components/Modal';
 import SubscribeForm from './components/SubscribeForm';
 
-import './App.scss';
-
 class App extends Component {
   modalProps = {
     triggerText: "Start Now"
