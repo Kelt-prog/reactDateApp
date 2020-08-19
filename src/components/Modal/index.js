@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ModalContent from './ModalContent';
 import ModalTrigger from './ModalTrigger';
+import "./Modal.scss";
+
 export class Modal extends Component {
   constructor() {
     super();

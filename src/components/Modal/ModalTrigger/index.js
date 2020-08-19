@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 class ModalTrigger extends Component {
   render() {
     return (
-      <button
+      <button 
         ref={this.props.buttonRef}
         onClick={this.props.showModal}
-        className="modal-button"
+        className="modal__button"
       >
         {this.props.triggerText}
       </button>

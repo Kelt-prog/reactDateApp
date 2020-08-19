@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import React from 'react';
+import { Gallery } from 'devextreme-react';
+import { data } from './data.js';
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
+import './Slider.scss';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
-class Slider extends Component {
+class App extends React.Component {
   render() {
-    const settings = {
-      slidesPerView: 1,
-      navigation: true,
-      pagination: {clickable: true },
-      scrollbar: { draggable: true },
-    }
     return (
-      <Swiper {...settings}>
-        <SwiperSlide>lorem<br></br> dsadsad</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-      </Swiper>
+        <div className="slider">
+          <div className="slider__container">
+            <Gallery
+              id="gallery"
+              dataSource={data}
+              height={'1024'}
+              width={'100%'}
+              //slideshowDelay={11000}
+              loop={true}
+              showNavButtons={false}
+              showIndicator = {true}
+              />
+          </div>
+        </div>
     );
   }
+
 }
 
-export default Slider;
+export default App;
