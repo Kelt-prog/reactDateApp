@@ -14,15 +14,15 @@ class App extends Component {
     triggerText: "Start Now"
   };
   modalContent = (
-      <SubscribeForm />
+    <SubscribeForm />
   );
 
   render() {
-    const modal = () => ( 
-      <Modal 
-        modalProps={this.modalProps} 
-        modalContent={this.modalContent} 
-      /> 
+    const modal = () => (
+      <Modal
+        modalProps={this.modalProps}
+        modalContent={this.modalContent}
+      />
     );
 
     return (
@@ -30,7 +30,7 @@ class App extends Component {
         <Slider />
         <Description />
         <Features />
-        <Prices childModal = { modal } />
+        <Prices childModal={modal} />
         <Footer />
       </React.Fragment>
     );
