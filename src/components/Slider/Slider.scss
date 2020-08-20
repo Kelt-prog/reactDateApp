@@ -1,27 +1,39 @@
+@import '../../mixin';
+
 .slider {
     &__container {
         max-width: 1440px;
         margin: 0 auto;
     }
+        @include sm {
+            height: 568px;
+        }
 }
 /* 
     Overwritting Slider component's CSS .
     This is bad practice, but making Slider with drag control from a scratch would take a time.
 */
+#gallery {
+    @include sm {
+        height: 568px !important;
+    }
+}
 .dx-gallery-item-image {
     width: 100%;
     height: inherit;
     object-fit: cover;
     object-position: center 40%;
+    @include sm {
+        height: 568px;
+    }
 }
 
-.dx-gallery-indicator-item-active, 
+.dx-gallery-indicator-item-active,
 .dx-gallery-indicator-item-selected,
-.dx-state-focused.dx-gallery 
-.dx-gallery-indicator-item-selected {
+.dx-state-focused.dx-gallery .dx-gallery-indicator-item-selected {
     width: 10px;
     height: 10px;
-    background: #FE4E16;
+    background: $primary;
     border: none;
     margin: 1px 6px;
 }

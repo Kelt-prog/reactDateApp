@@ -1,5 +1,11 @@
+@import '../../mixin';
+
 .subscribe-form {
-    padding: 40px 70px;
+    padding: 30px 70px;
+    @include md {
+        padding: 20px 15px;
+    }
+
     &__title {
         max-width: 70%;
         margin: 20px auto 30px;
@@ -7,20 +13,46 @@
         line-height: 90px;
         font-weight: 600;
         text-align: center;
+        @include lg {
+            font-size: 85px;
+            line-height: 85px;
+        }
+        @include md {
+            max-width: 100%;
+            font-size: 34px;
+            line-height: 34px;
+            margin: 10px 0;
+        }
     }
+
     &__subtitle {
         margin: 40px 0;
         font-size: 42px;
         line-height: 53px;
         text-align: center;
+        @include lg {
+            margin: 20px 0;
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @include md {
+            margin: 5px 0;
+            font-size: 16px;
+            line-height: 23px;
+        }
     }
+
     &__field {
         display: flex;
         margin: 20px 0;
     }
+
     &__label {
         margin-left: 30px;
         font-size: 20px;
+        @include md {
+            font-size: 14px;
+        }
     }
 }
 
@@ -33,15 +65,22 @@
     font-weight: bold;
     text-align: center;
     color: #fff;
-    background: #fe4e16;
+    background: $primary;
     border-radius: 10px;
     cursor: pointer;
-    
+    @include lg {
+        padding: 14px;
+    }
+    @include md {
+        padding: 8px;
+    }
+
     &:hover {
-        box-shadow: 0 5px 10px rgba(50,50,50,0.3);
+        box-shadow: 0 5px 10px rgba(50, 50, 50, 0.3);
         color: #fff;
         opacity: 0.9;
     }
+
     &--disabled {
         background: #717171;
         pointer-events: none;
@@ -51,22 +90,37 @@
 .dx-checkbox-icon {
     height: 30px;
     width: 30px;
+    @include md {
+        height: 20px;
+        width: 20px;
+    }
 }
+
 .dx-textbox {
     margin: 40px 0;
+    @include md {
+        margin: 25px 0;
+    }
 }
+
 .dx-texteditor.dx-editor-outlined {
     border-radius: 10px;
 }
+
 .dx-texteditor-input {
     padding: 24px;
     font-size: 20px;
+    @include md {
+        padding: 10px;
+    }
 }
+
 .dx-placeholder {
     left: 15px;
     color: #000;
     font-size: 20px;
 }
+
 .dx-checkbox-checked .dx-checkbox-icon {
     color: #000;
 }

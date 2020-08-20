@@ -16,7 +16,6 @@ class SubscribeForm extends Component {
         this.setState({
           checkBoxValue: args.value
         });
-        console.log(this.state);
       }
     render() {
         const isChecked = this.state.checkBoxValue;
@@ -34,7 +33,7 @@ class SubscribeForm extends Component {
                     <div className='subscribe-form__value'>
                         <CheckBox onValueChanged={this.onValueChanged} />
                     </div>
-                    <div className='subscribe-form__label'>I am 18+ and agree with <a href="">Terms of service</a></div>
+                    <div className='subscribe-form__label'>I am 18+ and agree with <a href="/">Terms of service</a></div>
                 </div>
                 <div className='subscribe-form__field'>
                     <div className='subscribe-form__value'>

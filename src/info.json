@@ -1,0 +1,46 @@
+{
+    "slider": [
+        "Sarah.jpg",
+        "Britney.jpg",
+        "Jess.jpg",
+        "Lora.jpg"
+    ],
+    "description": {
+        "title": "Hey, I am Marce. You can find my work in a lot of places, but the only <span class=\"title__link\">Premium Shows</span> I have is right here on FanCentro"
+    },
+    "features": [{
+            "id": 0,
+            "icon": "square.svg",
+            "text": "Huge<br/> variety of<br/> content!"
+        },
+        {
+            "id": 1,
+            "icon": "circle.svg",
+            "text": "Posted<br/> 24hrs a day<br/> 7 days a week!"
+        },
+        {
+            "id": 2,
+            "icon": "heart.svg",
+            "text": "Most intimate<br/> moments of<br/> my life!"
+        }
+    ],
+    "prices": [{
+            "id": 0,
+            "amount": "30$",
+            "period": "per month",
+            "title": "Free trial 2 days Whole content"
+        },
+        {
+            "id": 1,
+            "amount": "10$",
+            "period": "per month",
+            "title": "Free trial 1 day Solo shows"
+        },
+        {
+            "id": 2,
+            "amount": "5$",
+            "period": "per month",
+            "title": "Premium Shows"
+        }
+    ]
+}

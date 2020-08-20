@@ -1,5 +1,7 @@
+@import '../../mixin';
+
 .modal__button {
-    background-color: #fe4e16;
+    background-color: $primary;
     border-color: transparent;
     border-radius: 10px;
     color: #fff;
@@ -12,18 +14,27 @@
     -webkit-transition: color 0.5s ease;
     -o-transition: color 0.5s ease;
     transition: color 0.5s ease;
+    @include md {
+        max-width: 100px;
+        margin-left: auto;
+        font-weight: bold;
+    }
+    @include sm {
+        max-width: 70px;
+    }
     &:hover {
         box-shadow: 0 5px 10px rgba(50, 50, 50, 0.3);
         color: #fff;
         opacity: 0.9;
     }
+
     &:focus {
         outline: 0;
         box-shadow: 0 0 4px currentColor;
     }
 }
 
-.modal-cover {
+.modal__cover {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,7 +45,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-area {
+.modal__area {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,24 +54,39 @@
     padding: 2.5em 1.5em 1.5em 1.5em;
     background-color: #ffffff;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; 
+    overflow-y: auto;
     border-radius: 25px;
     -webkit-overflow-scrolling: touch;
+    @include md {
+        padding: 30px 15px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
-@media screen and (min-width: 500px) {
+
     /* Center the Modal! */
-    .modal-area {
+    .modal__area {
         left: 50%;
         top: 50%;
         height: auto;
         transform: translate(-50%, -50%);
         max-width: 55em;
         max-height: calc(100% - 1em);
+        @include lg {
+            max-width: initial;
+            width: 100%;
+            max-height: initial;
+            height: 100%;
+            border-radius: 0;
+            
+        }
     }
-}
 
-._modal-close {
+
+.modal__close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -70,21 +96,30 @@
     border: 0;
     box-shadow: 0;
     cursor: pointer;
+    @include md {
+        top: 0px;
+        right: 8px;
+    }
 }
 
-._modal-close-icon {
+.modal__close-icon {
     width: 35px;
     height: 35px;
     fill: transparent;
     stroke: black;
     stroke-linecap: round;
     stroke-width: 2;
+    @include lg {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-.modal-body {
+.modal__body {
     padding-top: 0.25em;
 }
-._hide-visual {
+
+.modal--hide-visual {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
     height: 1px !important;

@@ -1,41 +1,23 @@
 import React, { Component } from 'react';
 import  './Features.scss';
-import { ReactComponent as Circle } from './img/circle.svg';
-import { ReactComponent as Heart } from './img/heart.svg';
-import { ReactComponent as Square } from './img/square.svg';
 
 class Features extends Component {
     render() {
+        const features  = this.props.data;
         return (
-            <div className="container">
-                <div className="features">
-                    <div className="features__block">
-                        <div className="features__icon">
-                            <Square />
+            <div className='container'>
+                <div className='features'>
+                    {features.map((feature) => (
+                        <div key={feature.id} className='features__block'>
+                            <div className='features__icon'>
+                                <img src={require("./img/" + feature.icon)} alt='feature icon' />
+                            </div>
+                            <div dangerouslySetInnerHTML={{ __html: feature.text }} className='features__title' />
                         </div>
-                        <div className="features__title">
-                            Huge<br/>variety of<br/>content!
-                        </div> 
-                    </div>
-                    <div className="features__block">
-                        <div className="features__icon">
-                            <Circle />
-                        </div>
-                        <div className="features__title">
-                        Posted<br/>24hrs a day<br/>7 days a week!
-                        </div> 
-                    </div>
-                    <div className="features__block">
-                        <div className="features__icon">
-                            <Heart />
-                        </div>
-                        <div className="features__title">
-                            Most intimate<br/> moments of<br/>my life!
-                        </div> 
-                    </div>
+                    ))}
                 </div>
             </div>
-        )
+        );
     }
 }
 

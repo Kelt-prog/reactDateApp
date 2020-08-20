@@ -3,13 +3,14 @@ import  './Desc.scss';
 
 class Description extends Component {
     render() {
+        const { title } = this.props.data;
         return (
-            <div className="container">
-                <div className="title">
-                    Hey, I am Marce. You can find my work in a lot of places, but the only <span className="title__link">Premium Shows</span> I have is right here on FanCentro
-                </div>
+            <div className='container'>
+                {/* I think it's ok to use "dangerouslySetInnerHTML" in demo project */}
+                {/* For production there's many libraries to purify content */}
+                <div className='title' dangerouslySetInnerHTML={{ __html: title }} />
             </div>
-        )
+        );
     }
 }
 

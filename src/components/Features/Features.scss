@@ -1,13 +1,27 @@
+@import '../../mixin';
+
 .features {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 70px 0;
+    @include md {
+        margin: 50px 0;
+    }
 
     &__block {
         width: 33%;
         padding: 0 32px;
         border-left: 1px solid #8999A9;
+        @include lg {
+            padding: 0 10px;
+            &:first-child {
+                border-left:none;
+            }
+        }
+        @include sm {
+            padding: 0 5px;
+        }
     }
 
     &__icon {
@@ -15,6 +29,14 @@
         align-items: center;
         min-height: 80px;
         margin: 22px 0;
+        @include lg {
+            justify-content: center;
+        }
+        @include sm {
+            img {
+                max-height: 45px;
+            }
+        }
     }
 
     &__title {
@@ -23,5 +45,18 @@
         font-weight: 500;
         text-align: left;
         line-height: 50px;
+        @include lg {
+            font-size:26px;
+            line-height: 40px;
+            text-align: center;
+        }
+        @include md {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @include sm {
+            font-size: 13px;
+            line-height: 20px;
+        }
     }
 }

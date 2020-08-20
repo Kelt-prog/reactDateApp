@@ -6,6 +6,7 @@ import Prices from './components/Prices';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import SubscribeForm from './components/SubscribeForm';
+import jsonData from "./info.json";
 
 class App extends Component {
   modalProps = {
@@ -16,6 +17,10 @@ class App extends Component {
   );
 
   render() {
+    const { slider } = jsonData;
+    const { description } = jsonData;
+    const { features } = jsonData;
+    const { prices } = jsonData;
     const modal = () => (
       <Modal
         modalProps={this.modalProps}
@@ -25,10 +30,10 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <Slider />
-        <Description />
-        <Features />
-        <Prices childModal={modal} />
+        <Slider data={slider} />
+        <Description data={description} />
+        <Features data={features} />
+        <Prices data={prices} childModal={modal} />
         <Footer />
       </React.Fragment>
     );

@@ -1,11 +1,25 @@
+@import '../../mixin';
+
 .title {
     width: 80%;
-    margin:70px 0;
+    margin: 70px 0;
     font-size: 58px;
     font-weight: 500;
     line-height: 81px;
     text-align: left;
+
     &__link {
-        color: #FE4E16;
+        color: $primary;
+    }
+    @include xl {
+        width: 100%;
+        margin: 90px 0 80px;
+        font-size: 44px;
+        line-height: 64px;
+    }
+    @include sm {
+        margin: 55px 0;
+        font-size: 24px;
+        line-height: 40px;
     }
 }
